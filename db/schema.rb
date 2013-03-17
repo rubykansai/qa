@@ -1,3 +1,4 @@
+# encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -14,29 +15,29 @@ ActiveRecord::Schema.define(:version => 20130204125938) do
 
   create_table "answer_counters", :force => true do |t|
     t.integer  "subject_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "answers", :force => true do |t|
     t.integer  "question_id"
     t.text     "body"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
   create_table "choices", :force => true do |t|
     t.integer  "question_id"
     t.integer  "position"
     t.text     "body"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
   create_table "question_types", :force => true do |t|
     t.string   "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "questions", :force => true do |t|
@@ -44,8 +45,8 @@ ActiveRecord::Schema.define(:version => 20130204125938) do
     t.integer  "question_type_id"
     t.integer  "position"
     t.text     "body"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
   end
 
   create_table "subjects", :force => true do |t|
@@ -54,8 +55,8 @@ ActiveRecord::Schema.define(:version => 20130204125938) do
     t.date     "start_date"
     t.date     "end_date"
     t.integer  "max_respondents"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
   end
 
   create_table "users", :force => true do |t|
@@ -70,8 +71,8 @@ ActiveRecord::Schema.define(:version => 20130204125938) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",                                            :null => false
+    t.datetime "updated_at",                                            :null => false
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
