@@ -1,0 +1,6 @@
+<h3><%=h @subject.name %></h3>
+<ul class="infoList">
+  <li><%= link_to _('Answer'), answer_path(@subject) %></li>
+  <li><%= link_to _('Summary'), :controller => 'answers', :action => 'summary', :id => @subject %></li>
+</ul>
+<%= link_to _('Back'), subjects_path %>

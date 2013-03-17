@@ -1,0 +1,26 @@
+<%= error_messages_for :choice %>
+<table cellspacing="0">
+<%= form_tag choices_path, :remote => true do %>
+<%= hidden_field :choice, :question_id, :value => @question.id %>
+<thead>
+  <tr>
+    <th><%= _('Position') %></th>
+    <th><%= _('Body') %></th>
+    <th></th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>
+      <%= text_field :choice, :position, :size => 20 %>
+    </td>
+    <td>
+      <%= text_area :choice, :body, :size => "30x2" %>
+    </td>
+    <td>
+      <%= submit_tag _('Create'), :id => 'submit_button' %>
+    </td>
+  </tr>
+</tbody>
+<% end %>
+</table>

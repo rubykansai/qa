@@ -1,0 +1,24 @@
+<h1><%= _('Listing choices') %></h1>
+
+<table>
+  <tr>
+    <th><%= _('Question') %></th>
+    <th><%= _('Position') %></th>
+    <th><%= _('Body') %></th>
+  </tr>
+
+<% for choice in @choices %>
+  <tr>
+    <td><%=h choice.question_id %></td>
+    <td><%=h choice.position %></td>
+    <td><%=h choice.body %></td>
+    <td><%= link_to _('Show'), choice %></td>
+    <td><%= link_to _('Edit'), edit_choice_path(choice) %></td>
+    <td><%= link_to _('Destroy'), choice, :confirm => _('Are you sure?'), :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to _('New choice'), new_choice_path %>

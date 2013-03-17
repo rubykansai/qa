@@ -1,0 +1,52 @@
+<h1><%= _('Listing subjects') %></h1>
+<table class="subjects" cellspacing="0">
+  <thead>
+    <tr>
+      <th><%= _('User') %></th>
+      <th><%= _('Name') %></th>
+      <th><%= _('Start date') %></th>
+      <th><%= _('End date') %></th>
+      <th><%= _('Max respondents') %></th>
+      <th></th>
+      <th></th>
+      <%- if user_signed_in? -%>
+      <th></th>
+      <th></th>
+      <%- end -%>
+    </tr>
+  </thead>
+  <tbody>
+  <%- @subjects.each do |subject| -%>
+    <tr id="subject_<%= subject.id %>">
+      <td><%=h subject.user.name %></td>
+      <td><%= link_to subject.name, subject %></td>
+      <td><%=h subject.start_date %></td>
+      <td><%=h subject.end_date %></td>
+      <td><%=h subject.max_respondents %></td>
+      <%- if user_signed_in? -%>
+      <td><%= link_to _('Show'), subject %></td>
+      <td>
+        <%= link_to_if current_user.id == subject.user_id,
+        _('Edit'), edit_subject_path(subject) %>
+      </td>
+      <td>
+        <%= link_to_if current_user.id == subject.user_id,
+        _('Destroy'), subject, :remote=> true, :confirm => _('Are you sure?'), :method => :delete %>
+      </td>
+      <% else -%>
+      <td>
+        <%= link_to _('Answer'), {:controller => 'answers', :action => 'show', :id => subject.id } %>
+      </td>
+      <%- end -%>
+      <td>
+        <%= link_to _('Summary'), {:controller => 'answers', :action => 'summary', :id => subject.id } %>
+      </td>
+    </tr>
+  <% end -%>
+  </tbody>
+</table>
+
+<br />
+
+<%= link_to_if user_signed_in?, _('New subject'), new_subject_path %>
+<%= link_to_if user_signed_in?, _('New subject (batch)'), {:controller => 'batch', :action => 'new' } %>

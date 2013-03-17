@@ -1,0 +1,19 @@
+<h1><%= _('Editing question') %></h1>
+
+<%# error_messages_for :question %>
+
+<%= form_for(@question) do |f| %>
+  <dl class="editList">
+    <dt><%= _('Subject') %></dt><dd><%= f.text_field :subject_id %></dd>
+    <dt><%= _('Position') %></dt><dd><%= f.text_field :position %></dd>
+    <dt><%= _('Body') %></dt><dd><%= f.text_area :body %></dd>
+    <dt><%= _('Question type') %></dt><dd><%= select_question_type %></dd>
+  </dl>
+
+  <p>
+    <%= f.submit _('Update') %>
+  </p>
+<% end %>
+
+<%= link_to _('Show'), @question %> |
+<%= link_to _('Back'), subject_path(@question.subject_id) %>

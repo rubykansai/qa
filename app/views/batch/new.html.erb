@@ -1,0 +1,47 @@
+<div class="leftside">
+<p><%= _('Please write questionaire in YAML format.') %></p>
+
+<%= form_tag batch_path do %>
+<%= text_area :batch, "body", :size => '45x30' %><br/>
+<%= submit_tag _('Create'), :disabled_with => _('Please wait ...') %>
+<% end %>
+</div>
+<div class="rightside">
+<h4>Sample</h4>
+<pre>
+title: 第 27 回 Ruby/Rails 勉強会アンケート
+start: 2008-05-22
+end: 2008-07-10
+max: 100
+questions:
+  - body: Ruby ななにかについて
+    question_type: select
+    choices:
+      - あ
+      - い
+      - う
+      - え
+  - body: もうひとつの質問
+    question_type: text
+  - body: 司会について
+    question_type: select
+    choices:
+      - いまいち
+      - ふつう
+      - よかった
+      - 無回答
+  - body: 参加費について
+    question_type: select
+    choices:
+      - 安い
+      - 普通
+      - 高い
+      - 無回答
+  - body: Ruby ななにかについて
+    question_type: ruby_select
+  - body: Ruby 歴は？
+    question_type: how_many_years
+  - body: Ruby 勉強会の参加回数は？
+    question_type: how_many_times
+</pre>
+</div>

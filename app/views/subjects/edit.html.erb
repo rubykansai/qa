@@ -1,0 +1,26 @@
+<h1><%= _('Editing subject') %></h1>
+
+<% unless @subject.errors.empty? %>
+  <ul>
+    <% @subject.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= form_for(@subject) do |f| %>
+  <dl class="editList">
+    <dt><%= _('User') %></dt><dd><%= @subject.user.name %></dd>
+    <dt><%= _('Name') %></dt><dd><%= f.text_field :name %></dd>
+    <dt><%= _('Start date') %></dt><dd><%= f.date_select :start_date %></dd>
+    <dt><%= _('End date') %></dt><dd><%= f.date_select :end_date %></dd>
+    <dt><%= _('Max respondents') %></dt><dd><%= f.text_field :max_respondents %></dd>
+  </dl>
+
+  <p>
+    <%= f.submit _('Update') %>
+  </p>
+<% end %>
+
+<%= link_to _('Show'), @subject %> |
+<%= link_to _('Back'), subjects_path %>

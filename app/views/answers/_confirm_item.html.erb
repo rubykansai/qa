@@ -1,0 +1,5 @@
+<li>
+  <%=raw confirm_tag confirm_item %>
+  <%= hidden_field :answer,
+      "question_#{confirm_item.question_id}", :value => confirm_item.body %>
+</li>

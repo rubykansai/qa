@@ -1,0 +1,13 @@
+<table id="choices" cellspacing="0">
+  <thead>
+    <tr>
+      <th><%= _('Position') %></th>
+      <th><%= _('Body') %></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody id="choice_list">
+    <%= render :partial => 'choices/choice', :collection => @choices %>
+  </tbody>
+</table>

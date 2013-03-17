@@ -1,0 +1,15 @@
+<table id="questions" cellspacing="0">
+  <thead>
+  <tr>
+    <th><%= _('Position') %></th>
+    <th><%= _('Body') %></th>
+    <th><%= _('Question type') %></th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+  </thead>
+  <tbody id="question_list">
+    <%= render :partial => 'questions/question', :collection => @questions %>
+  </tbody>
+</table>

@@ -1,0 +1,17 @@
+<dl class="showList">
+  <dt><%= _('Subject') %></dt><dd><%=h @question.subject.name %></dd>
+  <dt><%= _('Position') %></dt><dd><%=h @question.position %></dd>
+  <dt><%= _('Body') %></dt><dd><%=h @question.body %></dd>
+</dl>
+
+<%= link_to _('Edit'), edit_question_path(@question) %> |
+<%= link_to _('Back'), subject_path(@question.subject.id) %>
+
+<%- if show_choice_block?(@question) -%>
+  <div id="choicesListBlock">
+    <%= render :partial => 'choices/list' %>
+  </div>
+  <div id="choiceFormBlock">
+    <%= render :partial => 'choices/form' %>
+  </div>
+<%- end -%>

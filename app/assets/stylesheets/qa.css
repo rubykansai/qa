@@ -1,0 +1,185 @@
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 4px;
+  background-color: #f8f8ff;
+  color: #333333;
+}
+
+body, p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size:   13px;
+  line-height: 18px;
+}
+
+div.notice {
+  color: green;
+}
+
+div.error {
+  color: red;
+}
+
+pre {
+  background-color: #eeeeee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+a { color: #000; }
+a:visited { color: #666; }
+a:hover { color: #fff; background-color:#000000; }
+
+.fieldWithErrors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+
+table {
+  width: 75%;
+  margin: 0;
+  padding: 0;
+  border-style: solid;
+  border-width: 1px;
+  vertical-align: middle;
+  font-family: verdana, arial, helvetica, sans-serif;
+}
+
+th {
+  background-color: #111111; /*#f5f5fe*/
+  color: #f5f5fe;
+  margin: 0;
+  padding: 1px;
+}
+
+td {
+  margin: 0px;
+  padding: 1px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: black;
+}
+
+
+#errorExplanation {
+  width: 400px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+
+#errorExplanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  background-color: #cc0000;
+  color: #fff;
+}
+
+#errorExplanation p {
+  color: #333;
+  margin-bottom: 0;
+  padding: 5px;
+}
+
+#errorExplanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+
+div.uploadStatus {
+  margin: 5px;
+}
+
+div.progressBar {
+  margin: 5px;
+}
+
+div.progressBar div.border {
+  background-color: #ffffff;
+  border: 1px solid gray;
+  width: 100%;
+}
+
+div.progressBar div.background {
+  background-color: #333333;
+  height: 18px;
+  width: 0%;
+}
+
+div#questionsListBlock {
+  padding: 10px 0 10px 0;
+}
+
+div#choicesListBlock {
+  padding: 10px 0 10px 0;
+}
+
+ul#headerList {
+  margin-left: 0px;
+  padding-left: 0px;
+}
+
+ul#headerList li {
+  list-style-type: none;
+  margin-left: 0px;
+  padding-left: 0px;
+  display: inline;
+}
+
+ul.choice-list li {
+  display: inline;
+  list-style-type: none;
+  padding: 3px;
+}
+
+dl.showList dt {
+  font-weight: bolder;
+}
+
+dl.editList dt {
+  font-weight: bolder;
+}
+
+input:focus {
+  background: #fff0f5;
+}
+textarea:focus {
+  background: #fff0f5;
+}
+
+div.graphImage {
+  float: right;
+  position: relative;
+  right: 300px;
+}
+
+div.leftside {
+  margin: 0;
+  padding: 0;
+  width: 50%;
+}
+
+div.rightside {
+  position: absolute;
+  top: 35px;
+  right: 0;
+  left: 50%;
+  margin: 0;
+  padding: 0;
+  width: 50%;
+}
+
+div.rightside pre {
+  margin-right: 10px;
+}
+

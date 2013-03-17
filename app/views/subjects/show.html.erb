@@ -1,0 +1,20 @@
+<dl class="showList">
+  <dt><%= _('User') %></dt><dd><%=h @subject.user.name %></dd>
+  <dt><%= _('Name') %></dt><dd><%=h @subject.name %></dd>
+  <dt><%= _('Start date') %></dt><dd><%=h @subject.start_date %></dd>
+  <dt><%= _('End date') %></dt><dd><%=h @subject.end_date %></dd>
+  <dt><%= _('Max respondents') %></dt><dd><%=h @subject.max_respondents %></dd>
+</dl>
+
+<%= link_to_if current_user.id == @subject.user_id,
+    _('Edit'), edit_subject_path(@subject) %> |
+<%= link_to _('Back'), subjects_path %>
+
+<div id="questionsListBlock">
+<%= render :partial => 'questions/list' %>
+</div>
+<div id="questionFormBlock">
+  <%- if current_user.id == @subject.user_id -%>
+  <%= render :partial => 'questions/form' %>
+  <%- end -%>
+</div>

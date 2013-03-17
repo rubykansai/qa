@@ -1,0 +1,12 @@
+<h3><%=h _('Confimation') %></h3>
+<p>
+  <%=h _('Please confirm the following answers and click the Answer button. ') %>
+</p>
+<%= form_tag answers_path do %>
+<ol>
+  <%= render :partial => 'answers/confirm_item', :collection => @answers %>
+</ol>
+<%= submit_tag _('Answer'), :disabled_with => _('Please wait ...') %>
+<% end -%>
+
+

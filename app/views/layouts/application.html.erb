@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= title_name %></title>
+  <%= stylesheet_link_tag :application %>
+  <%= javascript_include_tag :application %>
+  <%= csrf_meta_tag %>
+</head>
+<body>
+  <div id="cookie_check" style="display:none">
+    <%=h _("Please enable cookie.") %>
+  </div>
+  <noscript>
+    <%=h _("Please enable javascript and cookie.") %>
+  </noscript>
+<ul id="headerList">
+  <%- if user_signed_in? -%>
+    <li><%= _('Login as %{user}') % { :user => current_user.name } %></li>
+    <li><%= link_to _('Logout'), destroy_user_session_path %></li>
+    <li><%= link_to _('Settings'), edit_user_registration_path %></li>
+  <%- else -%>
+    <li><%= link_to _('Login'), new_user_session_path %></li>
+    <li><%= link_to _('Signup'), new_user_registration_path %></li>
+  <%- end -%>
+</ul>
+<div class="notice"><p><%= flash[:notice] %></p></div>
+<div class="error"><p><%= flash[:error] %></p></div>
+
+<%= yield %>
+
+</body>
+</html>

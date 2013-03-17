@@ -1,0 +1,29 @@
+<h2><%=h @subject.name %></h2>
+<ol>
+<% @answers.each do |answer| %>
+  <li>
+    <%=h answer[0].body %>
+  </li>
+  <%- unless /text/ =~ answer[0].question_type.name -%>
+  <div class="graphImage">
+    <%= image_tag(graph_url(:action => 'show', :id => answer[0].id)) %>
+  </div>
+  <%- end -%>
+  <ul>
+    <%- answer[1].each do |elem| -%>
+    <%- unless elem.body.blank? -%>
+    <li>
+      <% if elem.respond_to? :label -%>
+      <%=h elem.label %> : <%=h elem.count %>
+      <%- else -%>
+      <%=h elem.body %>
+      <%- end -%>
+    </li>
+    <%- end -%>
+    <%- end -%>
+  </ul>
+  <br style="clear:right;"/>
+<%- end -%>
+</ol>
+
+<p><%= link_to _("Back"), subjects_path %></p>

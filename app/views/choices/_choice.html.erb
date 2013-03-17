@@ -1,0 +1,14 @@
+<tr id="choice_<%=h choice.id %>">
+  <td><%=h choice.position %></td>
+  <td><%=h choice.body %></td>
+  <td><%= link_to _('Edit'), edit_choice_path(choice) %></td>
+  <td><%= link_to(
+          _('Destroy'),
+          choice_path(choice),
+          :update => "choice_#{choice.position}",
+          :remote => true,
+          :method => 'delete',
+          :confirm => _('Are you sure?'))
+      %>
+  </td>
+</tr>

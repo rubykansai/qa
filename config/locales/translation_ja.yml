@@ -1,0 +1,44 @@
+ja:
+  activerecord:
+    models:
+      user: "ユーザー"  #g
+      answer: "回答"  #g
+      choice: "選択"  #g
+      question_type: "問題タイプ"  #g
+      question: "質問"  #g
+      subject: "題目"  #g
+
+    attributes:
+      user:
+        email: "Eメール"  #g
+        encrypted_password: "暗号化パスワード"  #g
+        reset_password_token: "パスワードのリセットトークン"  #g
+        reset_password_sent_at: "パスワードのリセットがで送信"  #g
+        remember_created_at: "で作成された記憶"  #g
+        current_sign_in_at: "での現在の記号"  #g
+        last_sign_in_at: "での最後の記号"  #g
+        current_sign_in_ip: "IPアドレスの現在の記号"  #g
+        last_sign_in_ip: "IPアドレスの最後の記号"  #g
+
+      answer:
+        body: "ボディ"  #g
+
+      choice:
+        position: "位置"  #g
+        body: "ボディ"  #g
+        question: "質問"  #g
+
+      question_type:
+        name: "名"  #g
+
+      question:
+        position: "位置"  #g
+        body: "ボディ"  #g
+        subject: "題目"  #g
+
+      subject:
+        name: "名"  #g
+        start_date: "開始日"  #g
+        end_date: "終了日"  #g
+        max_respondents: "最大の回答"  #g
+        user: "ユーザー"  #g

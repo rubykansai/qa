@@ -1,0 +1,392 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: version 0.0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-03-17 18:36+0900\n"
+"PO-Revision-Date: 2008-03-02 03:41+0900\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#: app/models/question.rb:44
+msgid "2 times."
+msgstr ""
+
+#: app/models/question.rb:45
+msgid "3 times."
+msgstr ""
+
+#: app/models/question.rb:46
+msgid "4 times."
+msgstr ""
+
+#: app/models/question.rb:47
+msgid "5 times."
+msgstr ""
+
+#: app/views/subjects/show_anonymous.html.erb:3
+#: app/views/subjects/index.html.erb:38 app/views/answers/confirm.html.erb:9
+#: app/views/answers/show.html.erb:6
+msgid "Answer"
+msgstr ""
+
+#: app/controllers/answers_controller.rb:32
+msgid "Answers were successfully created."
+msgstr ""
+
+#: app/views/questions/_question.html.erb:15
+#: app/views/subjects/index.html.erb:34 app/views/choices/create.js.erb:5
+#: app/views/choices/index.html.erb:17 app/views/choices/_choice.html.erb:11
+msgid "Are you sure?"
+msgstr ""
+
+#: app/views/questions/edit.html.erb:19 app/views/questions/show.html.erb:8
+#: app/views/subjects/edit.html.erb:26
+#: app/views/subjects/show_anonymous.html.erb:6
+#: app/views/subjects/new.html.erb:42 app/views/subjects/show.html.erb:11
+#: app/views/answers/summary.html.erb:29 app/views/answers/show.html.erb:9
+#: app/views/choices/edit.html.erb:18 app/views/choices/new.html.erb:26
+#: app/views/choices/show.html.erb:8
+msgid "Back"
+msgstr ""
+
+#: app/views/questions/edit.html.erb:9 app/views/questions/_form.html.erb:8
+#: app/views/questions/show.html.erb:4 app/views/questions/index.html.erb:7
+#: app/views/questions/_list.html.erb:5 app/views/choices/edit.html.erb:9
+#: app/views/choices/_form.html.erb:8 app/views/choices/new.html.erb:17
+#: app/views/choices/show.html.erb:4 app/views/choices/index.html.erb:7
+#: app/views/choices/_list.html.erb:5
+msgid "Body"
+msgstr ""
+
+#: app/controllers/choices_controller.rb:41
+msgid "Choice was successfully created."
+msgstr ""
+
+#: app/controllers/choices_controller.rb:59
+msgid "Choice was successfully updated."
+msgstr ""
+
+#: app/views/answers/confirm.html.erb:1
+msgid "Confimation"
+msgstr ""
+
+#: app/views/questions/_form.html.erb:18 app/views/subjects/new.html.erb:38
+#: app/views/batch/new.html.erb:6 app/views/choices/_form.html.erb:21
+#: app/views/choices/new.html.erb:22
+msgid "Create"
+msgstr ""
+
+#: app/views/questions/_question.html.erb:11
+#: app/views/questions/_question.html.erb:18
+#: app/views/questions/index.html.erb:17 app/views/subjects/index.html.erb:34
+#: app/views/choices/create.js.erb:5 app/views/choices/index.html.erb:17
+#: app/views/choices/_choice.html.erb:6
+msgid "Destroy"
+msgstr ""
+
+#: app/views/questions/show.html.erb:7 app/views/questions/index.html.erb:16
+#: app/views/subjects/show.html.erb:10 app/views/subjects/index.html.erb:30
+#: app/views/choices/create.js.erb:4 app/views/choices/show.html.erb:7
+#: app/views/choices/index.html.erb:16 app/views/choices/_choice.html.erb:4
+msgid "Edit"
+msgstr ""
+
+#: app/views/choices/edit.html.erb:1
+msgid "Editing choice"
+msgstr ""
+
+#: app/views/questions/edit.html.erb:1
+msgid "Editing question"
+msgstr ""
+
+#: app/views/subjects/edit.html.erb:1
+msgid "Editing subject"
+msgstr ""
+
+#: app/views/subjects/edit.html.erb:16 app/views/subjects/new.html.erb:28
+#: app/views/subjects/show.html.erb:5 app/views/subjects/index.html.erb:8
+msgid "End date"
+msgstr ""
+
+#: app/models/question.rb:62
+msgid "Expensive"
+msgstr ""
+
+#: app/views/questions/_explain.html.erb:1
+msgid "Explain question_type"
+msgstr ""
+
+#: app/models/question.rb:54
+msgid "Good enough."
+msgstr ""
+
+#: app/models/question.rb:60
+msgid "Inexpensive."
+msgstr ""
+
+#: app/models/question.rb:29
+msgid "It seems to be useful for you."
+msgstr ""
+
+#: app/models/question.rb:28
+msgid "It was interesting in you."
+msgstr ""
+
+#: app/models/question.rb:26
+msgid "It was too difficult for you."
+msgstr ""
+
+#: app/models/question.rb:53
+msgid "Lack something."
+msgstr ""
+
+#: app/models/question.rb:34
+msgid "Less than 6 months."
+msgstr ""
+
+#: app/views/choices/index.html.erb:1
+msgid "Listing choices"
+msgstr ""
+
+#: app/views/questions/index.html.erb:1
+msgid "Listing questions"
+msgstr ""
+
+#: app/views/subjects/index.html.erb:1
+msgid "Listing subjects"
+msgstr ""
+
+#: app/views/layouts/application.html.erb:22
+msgid "Login"
+msgstr ""
+
+#: app/views/layouts/application.html.erb:18
+msgid "Login as %{user}"
+msgstr ""
+
+#: app/views/layouts/application.html.erb:19
+msgid "Logout"
+msgstr ""
+
+#: app/views/subjects/edit.html.erb:17 app/views/subjects/new.html.erb:33
+#: app/views/subjects/show.html.erb:6 app/views/subjects/index.html.erb:9
+msgid "Max respondents"
+msgstr ""
+
+#: app/models/question.rb:36
+msgid "More than 1 year or Less than 2 years."
+msgstr ""
+
+#: app/models/question.rb:49
+msgid "More than 10 times."
+msgstr ""
+
+#: app/models/question.rb:37
+msgid "More than 2 years or Less than 3 years."
+msgstr ""
+
+#: app/models/question.rb:38
+msgid "More than 3 years or Less than 5 years."
+msgstr ""
+
+#: app/models/question.rb:48
+msgid "More than 5 times or Less than 10 times."
+msgstr ""
+
+#: app/models/question.rb:39
+msgid "More than 5 years."
+msgstr ""
+
+#: app/models/question.rb:35
+msgid "More than 6 months or Less than 1 year."
+msgstr ""
+
+#: app/views/subjects/edit.html.erb:14 app/views/subjects/new.html.erb:18
+#: app/views/subjects/show.html.erb:3 app/views/subjects/index.html.erb:6
+msgid "Name"
+msgstr ""
+
+#: app/views/choices/new.html.erb:1 app/views/choices/index.html.erb:24
+msgid "New choice"
+msgstr ""
+
+#: app/views/questions/index.html.erb:24
+msgid "New question"
+msgstr ""
+
+#: app/views/subjects/new.html.erb:1 app/views/subjects/index.html.erb:51
+msgid "New subject"
+msgstr ""
+
+#: app/views/subjects/index.html.erb:52
+msgid "New subject (batch)"
+msgstr ""
+
+#: app/models/question.rb:30 app/models/question.rb:56
+#: app/models/question.rb:63
+msgid "Non-responding."
+msgstr ""
+
+#: app/views/answers/confirm.html.erb:3
+msgid "Please confirm the following answers and click the Answer button. "
+msgstr ""
+
+#: app/views/layouts/application.html.erb:11
+msgid "Please enable cookie."
+msgstr ""
+
+#: app/views/layouts/application.html.erb:14
+msgid "Please enable javascript and cookie."
+msgstr ""
+
+#: app/views/answers/confirm.html.erb:9 app/views/answers/show.html.erb:6
+#: app/views/batch/new.html.erb:6
+msgid "Please wait ..."
+msgstr ""
+
+#: app/views/batch/new.html.erb:2
+msgid "Please write questionaire in YAML format."
+msgstr ""
+
+#: app/views/questions/edit.html.erb:8 app/views/questions/_form.html.erb:7
+#: app/views/questions/show.html.erb:3 app/views/questions/index.html.erb:6
+#: app/views/questions/_list.html.erb:4 app/views/choices/edit.html.erb:8
+#: app/views/choices/_form.html.erb:7 app/views/choices/new.html.erb:12
+#: app/views/choices/show.html.erb:3 app/views/choices/index.html.erb:6
+#: app/views/choices/_list.html.erb:4
+msgid "Position"
+msgstr ""
+
+#: app/helpers/application_helper.rb:6
+msgid "Qa"
+msgstr ""
+
+#: app/views/choices/edit.html.erb:7 app/views/choices/new.html.erb:7
+#: app/views/choices/show.html.erb:2 app/views/choices/index.html.erb:5
+msgid "Question"
+msgstr ""
+
+#: app/views/questions/edit.html.erb:10 app/views/questions/_form.html.erb:9
+#: app/views/questions/_list.html.erb:6
+msgid "Question type"
+msgstr ""
+
+#: app/controllers/questions_controller.rb:30
+msgid "Question was successfully created."
+msgstr ""
+
+#: app/controllers/questions_controller.rb:53
+msgid "Question was successfully updated."
+msgstr ""
+
+#: app/models/question.rb:61
+msgid "Reasonable."
+msgstr ""
+
+#: app/views/layouts/application.html.erb:20
+msgid "Settings"
+msgstr ""
+
+#: app/views/questions/edit.html.erb:18
+#: app/views/questions/_question.html.erb:6
+#: app/views/questions/index.html.erb:15 app/views/subjects/edit.html.erb:25
+#: app/views/subjects/index.html.erb:27 app/views/choices/edit.html.erb:17
+#: app/views/choices/index.html.erb:15
+msgid "Show"
+msgstr ""
+
+#: app/views/layouts/application.html.erb:23
+msgid "Signup"
+msgstr ""
+
+#: app/views/subjects/edit.html.erb:15 app/views/subjects/new.html.erb:23
+#: app/views/subjects/show.html.erb:4 app/views/subjects/index.html.erb:7
+msgid "Start date"
+msgstr ""
+
+#: app/views/questions/edit.html.erb:7 app/views/questions/show.html.erb:2
+#: app/views/questions/index.html.erb:5
+msgid "Subject"
+msgstr ""
+
+#: app/controllers/subjects_controller.rb:35
+msgid "Subject was successfully created."
+msgstr ""
+
+#: app/controllers/subjects_controller.rb:48
+msgid "Subject was successfully updated."
+msgstr ""
+
+#: app/views/subjects/show_anonymous.html.erb:4
+#: app/views/subjects/index.html.erb:42
+msgid "Summary"
+msgstr ""
+
+#: app/views/questions/edit.html.erb:14 app/views/subjects/edit.html.erb:21
+#: app/views/choices/edit.html.erb:13
+msgid "Update"
+msgstr ""
+
+#: app/views/subjects/edit.html.erb:13 app/views/subjects/new.html.erb:13
+#: app/views/subjects/show.html.erb:2 app/views/subjects/index.html.erb:5
+msgid "User"
+msgstr ""
+
+#: app/models/question.rb:55
+msgid "Very good."
+msgstr ""
+
+#: app/models/question.rb:25
+msgid "You cannot be interested in it."
+msgstr ""
+
+#: app/controllers/answers_controller.rb:84
+msgid "You cannot fill in this questionnaire."
+msgstr ""
+
+#: app/models/question.rb:27
+msgid "You have understood it a little."
+msgstr ""
+
+#: app/controllers/batch_controller.rb:70
+msgid "data was successfully created."
+msgstr ""
+
+#: app/models/question.rb:43
+msgid "first time."
+msgstr ""
+
+#: app/controllers/batch_controller.rb:85
+msgid "invalid data."
+msgstr ""
+
+#: app/controllers/answers_controller.rb:34
+msgid "maybe something wrong."
+msgstr ""
+
+#: app/controllers/batch_controller.rb:79
+msgid "permission denied."
+msgstr ""
+
+#: app/controllers/batch_controller.rb:82
+msgid "posted data have no questions or choices."
+msgstr ""
+
+#: app/controllers/batch_controller.rb:30
+msgid "posted data have no questions."
+msgstr ""
+
+#: app/controllers/batch_controller.rb:90
+msgid "something wrong."
+msgstr ""

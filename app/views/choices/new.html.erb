@@ -1,0 +1,26 @@
+<h1><%= _('New choice') %></h1>
+
+<%= error_messages_for :choice %>
+
+<%= form_for(@choice) do |f| %>
+  <p>
+    <b><%= _('Question') %></b><br />
+    <%= f.text_field :question_id %>
+  </p>
+
+  <p>
+    <b><%= _('Position') %></b><br />
+    <%= f.text_field :position %>
+  </p>
+
+  <p>
+    <b><%= _('Body') %></b><br />
+    <%= f.text_area :body %>
+  </p>
+
+  <p>
+    <%= f.submit _('Create') %>
+  </p>
+<% end %>
+
+<%= link_to _('Back'), choices_path %>

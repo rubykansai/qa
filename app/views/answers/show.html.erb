@@ -1,0 +1,9 @@
+<h3><%= @subject.name %></h3>
+<%= form_tag '/answers/confirm' do %>
+<ol>
+<%= render :partial => 'question', :collection => @questions %>
+</ol>
+<%= submit_tag _('Answer'), :disabled_with => _('Please wait ...') %>
+<% end %>
+
+<p><%= link_to _('Back'),  subjects_path %></p>

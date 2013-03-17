@@ -1,0 +1,24 @@
+<%# error_messages_for :question %>
+<table cellspacing="0">
+<%= form_tag 'add_question' do -%>
+<%= hidden_field :question, :subject_id, :value => @subject.id %>
+<thead>
+  <tr>
+    <th><%= _('Position') %></th>
+    <th><%= _('Body') %></th>
+    <th><%= _('Question type') %></th>
+    <th></th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td><%= text_field :question, :position, :size => 20 %></td>
+    <td><%= text_area :question, :body, :size => "30x2" %></td>
+    <td><%= select_question_type %>
+    <td><%= submit_tag _('Create'), :id => 'submit_button' %></td>
+  </tr>
+</tbody>
+<% end -%>
+</table>
+
+<%= render :partial => 'questions/explain' %>

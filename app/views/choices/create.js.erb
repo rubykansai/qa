@@ -1,0 +1,5 @@
+$("tbody#choice_list").append($("<tr>").attr("id", "choce_<%= @choice.id %>")
+                              .append($("<td>").text("<%= @choice.position %>"))
+                              .append($("<td>").text("<%= @choice.body %>"))
+                              .append($("<td>").append('<%= link_to _("Edit"), edit_choice_path(@choice) %>'))
+                              .append($("<td>").append('<%= link_to _("Destroy"), choice_path(@choice), :remote => true, :method => "delete", :confirm => _("Are you sure?") %>')));

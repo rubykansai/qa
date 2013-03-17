@@ -1,0 +1,26 @@
+  <tr id="question_<%= question.id %>">
+    <td><%=h question.position %></td>
+    <td><%=h question.body %></td>
+    <td><%=h question.question_type.name %></td>
+    <% if user_signed_in? -%>
+    <td><%= link_to _('Show'), question %></td>
+    <td><%= link_to_if current_user.id == @subject.user_id, 'Edit', edit_question_path(question) %></td>
+    <td>
+      <% if current_user.id == @subject.user_id -%>
+      <%= link_to(
+          _('Destroy'),
+          question_path(question),
+          :remote => true,
+          :method => 'delete',
+          :confirm => _('Are you sure?'))
+      %>
+      <% else -%>
+      <%= _('Destroy') %>
+      <% end -%>
+    </td>
+    <% else -%>
+    <td></td>
+    <td></td>
+    <td></td>
+    <% end -%>
+  </tr>

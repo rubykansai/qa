@@ -1,0 +1,8 @@
+<dl>
+  <dt><%= _('Question') %></dt><dd><%=h @choice.question_id %></dd>
+  <dt><%= _('Position') %></dt><dd><%=h @choice.position %></dd>
+  <dt><%= _('Body') %> : </dt><dd><%=h @choice.body %></dd>
+</dl>
+
+<%= link_to _('Edit'), edit_choice_path(@choice) %> |
+<%= link_to _('Back'), choices_path %>

@@ -1,0 +1,11 @@
+<h3><%= _('Explain question_type') %></h3>
+<ul>
+  <%- explain_question_type.each do |elem|  -%>
+  <li><%= elem[0] %></li>
+  <ul>
+    <%- elem[1].each do |detail| -%>
+    <li><%= detail.join(' : ') %></li>
+    <%- end -%>
+  </ul>
+<%- end -%>
+</ul>
