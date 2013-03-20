@@ -6,4 +6,6 @@ tmp/
 /vendor/bundle/
 .sass-cache/
 /config/database.yml
+/public/assets/
+/public/graph/
 
