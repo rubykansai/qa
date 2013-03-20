@@ -8,4 +8,4 @@ tmp/
 /config/database.yml
 /public/assets/
 /public/graph/
-
+/bin/
