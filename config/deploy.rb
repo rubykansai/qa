@@ -3,6 +3,13 @@ require "bundler/capistrano"
 set :application, "qa"
 set :repository,  "git://github.com/okkez/qa.git"
 set :scm, :git
+set :deploy_to, "/var/local/webapps/qa-rails3/"
+
+set :use_sudo, false
+set(:ssh_options, {
+      :user => "app",
+#      :verbose => :debug,
+})
 
 # set :scm, :git # You can set :scm explicitly or Capistrano will make an intelligent guess based on known version control directory names
 # Or: `accurev`, `bzr`, `cvs`, `darcs`, `git`, `mercurial`, `perforce`, `subversion` or `none`
@@ -26,3 +33,11 @@ role :db,  "okkez.net", :primary => true
 #     run "#{try_sudo} touch #{File.join(current_path,'tmp','restart.txt')}"
 #   end
 # end
+
+namespace :deploy do
+  task :symlink_database_config do
+    run "ln -s #{shared_path}/system/database.yml #{release_path}/config/database.yml"
+  end
+end
+
+after("deploy:update_code", "deploy:symlink_database_config")
