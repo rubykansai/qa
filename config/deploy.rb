@@ -1,3 +1,5 @@
+require "bundler/capistrano"
+
 set :application, "qa"
 set :repository,  "git://github.com/okkez/qa.git"
 set :scm, :git
