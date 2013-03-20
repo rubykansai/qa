@@ -1,5 +1,4 @@
 require "bundler/capistrano"
-require "capistrano-unicorn"
 
 set :application, "qa"
 set :repository,  "git://github.com/okkez/qa.git"
@@ -36,8 +35,9 @@ role :db,  "okkez.net", :primary => true
 # end
 
 # https://github.com/sosedoff/capistrano-unicorn
-#after 'deploy:restart', 'unicorn:reload' # app IS NOT preloaded
-after 'deploy:restart', 'unicorn:restart'  # app preloaded
+require "capistrano-unicorn"
+after 'deploy:restart', 'unicorn:reload'
+
 
 namespace :deploy do
   task :symlink_database_config do
