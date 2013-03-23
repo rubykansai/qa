@@ -60,7 +60,7 @@ class QuestionsControllerTest < ActionController::TestCase
     user = login_as(:quentin)
     @subject = FactoryGirl.build(:subject, id: 1, user: user)
     @question = FactoryGirl.build(:question, id: 1, subject: @subject)
-    mock(Question).find(anything()).returns(@question)
+    mock(Question).find(anything()){ @question }
 
     get :edit, id: @question.id
 
