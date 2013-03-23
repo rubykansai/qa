@@ -28,5 +28,11 @@
 
 <%= yield %>
 
+<div class="footer">
+  <%- if revision_file.exist? -%>
+    <p><%= link_to_github commit_id %> Deproyed at <%= deployed_at %></p>
+  <%- end -%>
+</div>
+
 </body>
 </html>
