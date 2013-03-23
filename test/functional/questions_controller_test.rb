@@ -68,15 +68,20 @@ class QuestionsControllerTest < ActionController::TestCase
     assert_template("questions/edit")
   end
 
-  # def test_get_edit_by_login_user_other
-  #   @another = mock_model(User, :id => 2)
-  #   @subject = mock_model(Subject, :user => @user)
-  #   @question = mock_model(Question, :subject => @subject)
-  #   Question.should_receive(:find).with(anything()).and_return(@question)
+  def test_get_edit_others_question_by_login_user
+    @another = FactoryGirl.create(:user,
+                                  name: "another",
+                                  email: "another@example.com",
+                                  password: "monkey")
+    @subject = FactoryGirl.build(:subject, id: 1, user: @another)
+    @question = FactoryGirl.build(:question, id: 1, subject: @subject)
+    mock(Question).find(anything()){ @question }
 
-  #   login_as(@anonther)
-  #   get :edit, id: 1 # raise PermissionError
-  # end
+    login_as(:quentin)
+    assert_raise(PermissionError) do
+      get :edit, id: @question.id
+    end
+  end
 
   def test_get_edit_by_anonymous_user
     get :edit, id: 1
