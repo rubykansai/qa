@@ -3,14 +3,6 @@ require "test_helper"
 class SubjectsControllerTest < ActionController::TestCase
 
   def test_get_index_by_login_user
-    @attributes = {
-      :id => 1,
-      :user_id => 1,
-      :name => 'string',
-      :start_date => Date.today,
-      :end_date => Date.today,
-      :max_respondents => 100,
-    }
     user = login_as(:quentin)
     subjects = (1..10).map{|n| FactoryGirl.build(:subject, id: n, user: user) }
     mock(Subject).all(order: "start_date", include: :user).returns(subjects)
