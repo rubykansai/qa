@@ -1,7 +1,7 @@
 require "bundler/capistrano"
 
 set :application, "qa"
-set :repository,  "git://github.com/okkez/qa.git"
+set :repository,  "git://github.com/rubykansai/qa.git"
 set :scm, :git
 set :deploy_to, "/var/local/webapps/qa-rails3/"
 
