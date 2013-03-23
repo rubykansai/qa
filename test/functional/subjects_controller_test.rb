@@ -11,10 +11,10 @@ class SubjectsControllerTest < ActionController::TestCase
       :end_date => Date.today,
       :max_respondents => 100,
     }
-    subjects = (1..10).map{|n| FactoryGirl.build(:subject, id: n) }
+    user = login_as(:quentin)
+    subjects = (1..10).map{|n| FactoryGirl.build(:subject, id: n, user: user) }
     mock(Subject).all(order: "start_date", include: :user).returns(subjects)
 
-    login_as(:quentin)
     get :index
 
     assert_response :success
@@ -23,12 +23,12 @@ class SubjectsControllerTest < ActionController::TestCase
   end
 
   def test_get_show_by_login_user
-    @subject = FactoryGirl.build(:subject, id: 1)
+    user = login_as(:quentin)
+    @subject = FactoryGirl.build(:subject, id: 1, user: user)
     mock(Subject).find(@subject.id.to_s){ @subject }
     mock(Question).all(conditions: { subject_id: @subject.id },
                        order: "position").returns([])
 
-    login_as(:quentin)
     get :show, id: @subject
 
     assert_response :success
@@ -62,10 +62,11 @@ class SubjectsControllerTest < ActionController::TestCase
   end
 
   def test_get_edit_by_login_user
-    @subject = FactoryGirl.build(:subject, id: 1)
+    user = login_as(:quentin)
+
+    @subject = FactoryGirl.build(:subject, id: 1, user: user)
     mock(Subject).where(anything()){ [@subject] }
 
-    login_as(:quentin)
     get :edit, id: @subject
 
     assert_response :success
