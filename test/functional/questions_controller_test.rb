@@ -60,6 +60,7 @@ class QuestionsControllerTest < ActionController::TestCase
     @subject = FactoryGirl.build(:subject, id: 1)
     @question = FactoryGirl.build(:question, id: 1, subject: @subject)
     mock(Question).find(anything()).returns(@question)
+    mock(@controller).permitted?{ true }
 
     login_as(:quentin)
     get :edit, id: @question.id
@@ -119,6 +120,7 @@ class QuestionsControllerTest < ActionController::TestCase
     @subject = FactoryGirl.build(:subject, id: 1)
     @question = FactoryGirl.build(:question, id: 1, subject: @subject)
     mock(Question).find(@question.id.to_s){ @question }
+    mock(@controller).permitted?{ true }
 
     login_as(:quentin)
     put(:update,
@@ -150,6 +152,7 @@ class QuestionsControllerTest < ActionController::TestCase
     @subject = FactoryGirl.build(:subject, id: 1)
     @question = FactoryGirl.build(:question, id: 1, subject: @subject)
     mock(Question).find(@question.id.to_s){ @question }
+    mock(@controller).permitted?{ true }
 
     login_as(:quentin)
     delete :destroy, id: @question.id
