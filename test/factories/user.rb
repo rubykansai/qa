@@ -1,5 +1,6 @@
 FactoryGirl.define do
   factory(:user) do |m|
+    m.id 1
   end
   factory(:quentin, parent: :user) do |m|
     m.name  "quentin"
