@@ -57,12 +57,11 @@ class QuestionsControllerTest < ActionController::TestCase
   end
 
   def test_get_edit_by_login_user
-    @subject = FactoryGirl.build(:subject, id: 1)
+    user = login_as(:quentin)
+    @subject = FactoryGirl.build(:subject, id: 1, user: user)
     @question = FactoryGirl.build(:question, id: 1, subject: @subject)
     mock(Question).find(anything()).returns(@question)
-    mock(@controller).permitted?{ true }
 
-    login_as(:quentin)
     get :edit, id: @question.id
 
     assert_response :success
@@ -117,12 +116,11 @@ class QuestionsControllerTest < ActionController::TestCase
   end
 
   def test_put_update_by_login_user
-    @subject = FactoryGirl.build(:subject, id: 1)
+    user = login_as(:quentin)
+    @subject = FactoryGirl.build(:subject, id: 1, user: user)
     @question = FactoryGirl.build(:question, id: 1, subject: @subject)
     mock(Question).find(@question.id.to_s){ @question }
-    mock(@controller).permitted?{ true }
 
-    login_as(:quentin)
     put(:update,
         :id => @question.id,
         :question => {
@@ -149,12 +147,11 @@ class QuestionsControllerTest < ActionController::TestCase
   end
 
   def test_delete_destroy_by_login_user
-    @subject = FactoryGirl.build(:subject, id: 1)
+    user = login_as(:quentin)
+    @subject = FactoryGirl.build(:subject, id: 1, user: user)
     @question = FactoryGirl.build(:question, id: 1, subject: @subject)
     mock(Question).find(@question.id.to_s){ @question }
-    mock(@controller).permitted?{ true }
 
-    login_as(:quentin)
     delete :destroy, id: @question.id
 
     assert_response :redirect
