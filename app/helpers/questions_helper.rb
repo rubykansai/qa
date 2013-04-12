@@ -13,7 +13,7 @@ module QuestionsHelper
     QuestionType.all(:conditions => ["name not in (?, ?)", 'select', 'text'],
                      :order => "id").map do |qt|
       [qt.name,
-       Question.const_get(qt.name.upcase.to_sym).sort_by{|key, val| key }]
+       Question.const_get(qt.name.upcase).map{|key, label| [key, _(label)] }.sort_by(&:first)]
     end
   end
 end
