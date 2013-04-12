@@ -7,7 +7,7 @@ module AnswersHelper
         row_id = "question_#{row.question_id}_#{row.position}"
         [
          radio_button(:answer, "question_#{row.question_id}", row.position),
-         label(:answer, row_id, row.body)
+         label(:answer, row_id, _(row.body))
         ]
       }.map{|v|
         "<li>#{v.join('')}</li>"
