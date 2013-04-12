@@ -1,6 +1,6 @@
 <tr id="choice_<%=h choice.id %>">
   <td><%=h choice.position %></td>
-  <td><%=h choice.body %></td>
+  <td><%=h _(choice.body) %></td>
   <td><%= link_to _('Edit'), edit_choice_path(choice) %></td>
   <td><%= link_to(
           _('Destroy'),
