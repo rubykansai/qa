@@ -31,7 +31,7 @@ module AnswersHelper
       <<-TAG
 #{question.body}
 <ul>
-  <li>#{choice[0].body}</li>
+  <li>#{_(choice[0].body)}</li>
 </ul>
       TAG
     when /text/

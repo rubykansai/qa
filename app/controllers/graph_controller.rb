@@ -26,7 +26,7 @@ class GraphController < ApplicationController
 
     g.title = @answers.first.body
     @answers.each do |answer|
-      g.data(answer.label, answer.count.to_i)
+      g.data(_(answer.label), answer.count.to_i)
     end
 
     send_data(g.to_blob,

@@ -14,7 +14,7 @@
     <%- unless elem.body.blank? -%>
     <li>
       <% if elem.respond_to? :label -%>
-      <%=h elem.label %> : <%=h elem.count %>
+      <%=h _(elem.label) %> : <%=h elem.count %>
       <%- else -%>
       <%=h elem.body %>
       <%- end -%>
