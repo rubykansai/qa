@@ -16,8 +16,7 @@ class GraphSweeper < ActionController::Caching::Sweeper
   private
 
   def expire_image(id)
-    expire_page graph_url(:action => 'show', :id => id,
-                          :only_path => true, :skip_relative_url_root => true)
+    expire_page(graph_url(action: 'show', id: id, only_path: true))
   end
 
 end

@@ -1,5 +1,6 @@
 class AnswersController < ApplicationController
   before_filter :answer?, only: %w[show confirm create]
+  cache_sweeper :graph_sweeper, only: [:create]
 
   def show
     @subject = Subject.find(params[:id])
