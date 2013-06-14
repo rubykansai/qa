@@ -1,8 +1,5 @@
 require "bundler/capistrano"
 
-require "capistrano-rbenv"
-set :rbenv_ruby_version, "2.0.0-p195"
-
 set :application, "qa"
 set :repository,  "git://github.com/rubykansai/qa.git"
 set :scm, :git
