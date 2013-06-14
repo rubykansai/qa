@@ -6,7 +6,7 @@ set :rbenv_ruby_version, "2.0.0-p195"
 set :application, "qa"
 set :repository,  "git://github.com/rubykansai/qa.git"
 set :scm, :git
-set :deploy_to, "/var/local/webapps/qa-rails3/"
+set :deploy_to, "/srv/www/webapps/qa/"
 
 set :use_sudo, false
 set(:ssh_options, {
