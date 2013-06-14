@@ -12,6 +12,7 @@ gem 'unicorn'
 
 # Deploy with Capistrano
 gem 'capistrano'
+gem 'capistrano-rbenv'
 group :development do
   gem 'capistrano-unicorn', :require => false
 end
